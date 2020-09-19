@@ -1,6 +1,6 @@
 import { GET_CODING,GET_COKING,GET_GRAPHIC_DESIGN , GET_SINGLE_COURSE, ADMIN_COURSES } from "../actionTypes";
 import axios from "axios";
-import { NotificationManager } from 'react-notifications';
+
 
 export const addCourse = (course) => async (dispatch) => {
     try{
@@ -25,10 +25,10 @@ export const addCourse = (course) => async (dispatch) => {
             }
         )
         if(data.statusCode === 201){
-            NotificationManager.success('Product added successfully', 'Success')
+            alert('Product added successfully')
         }
         else if(data.statusCode === 400){
-            NotificationManager.error(data.message, 'Error')
+            alert('Error')
         }
         console.log(data)
     }catch(err){
