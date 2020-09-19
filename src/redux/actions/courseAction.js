@@ -17,7 +17,7 @@ export const addCourse = (course) => async (dispatch) => {
             fData.append("video" , video[i])
         }
         const {data} = await axios.post(
-            `http://localhost:1234https://udemyfprt.herokuapp.com/add/course`,fData,{
+            `https://udemyfprt.herokuapp.com/add/course`,fData,{
                 headers:{
                     Authorization :token,
                     'content-type': 'multipart/form-data'
