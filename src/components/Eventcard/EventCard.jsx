@@ -30,7 +30,8 @@ function OutlinedCard({ course ,user }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} variant="outlined">
+    <>
+      { course ? <Card className={classes.root} variant="outlined">
       <CardContent style={{marginTop:"15px"}}>
         <Typography variant="h6" component="h2">
           {`${course.title}`}
@@ -43,7 +44,8 @@ function OutlinedCard({ course ,user }) {
           {user === null ? <Link to={`/courseDetaills/${course._id}`}><button>View</button></Link> :  <Link to={`/courseDetaills/${course._id}`}><button>Detaiils</button></Link> }
           </div>
       </CardContent>
-    </Card>
+    </Card> : <h1>No Courses Baught</h1>}
+    </>
   );
 }
 
