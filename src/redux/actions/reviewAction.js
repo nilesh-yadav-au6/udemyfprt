@@ -1,4 +1,4 @@
-import { GET_RREVIEW ,TOGGLE_REVIEW } from "../actionTypes"
+import { GET_RREVIEW} from "../actionTypes"
 import axios from "axios"
 // import { NotificationManager } from 'react-notifications';
 

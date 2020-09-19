@@ -59,7 +59,7 @@ class CourseDetaill extends Component {
             handler: async (response) => {
               try {
 
-                const {data} = await axios.post(`https://udemyfprt.herokuapp.com/verify`, {...response , amount:a.amount , currency:"INR"},{
+                await axios.post(`https://udemyfprt.herokuapp.com/verify`, {...response , amount:a.amount , currency:"INR"},{
                   headers:{
                     Authorization : token
                   }

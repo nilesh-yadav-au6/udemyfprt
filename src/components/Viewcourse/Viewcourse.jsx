@@ -1,11 +1,10 @@
-import React , {useEffect , Component} from "react";
-import { makeStyles } from "@material-ui/styles";
+import React , {Component} from "react";
 import Card from '@material-ui/core/Card';
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
 import { getSingleCOurse } from "../../redux/actions/courseAction"
-import { Link } from "react-router-dom"
+
 
 
 
