@@ -22,7 +22,8 @@ class SignUp extends Component {
     event.preventDefault();
     const newUser = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      name:this.state.name
     };
     this.props.userCreate(newUser);
     this.props.history.push("/login");

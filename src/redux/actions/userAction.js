@@ -9,7 +9,7 @@ export const userCreate = (user) => async (dispatch) => {
         ...user
       }
     );
-    console.loda(data)
+    console.log(data)
     dispatch({ type: USER_CREATE, payload: data.user });
   } catch (err){
     console.log(err);

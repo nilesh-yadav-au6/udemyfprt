@@ -82,20 +82,20 @@ class CourseDetaill extends Component {
     render() {
         return (
             <div> 
-                <h1>detaills
+                <h1>Detaill
                 </h1>
                 {
                     this.props.single !== null ? 
-                    <Card  variant="outlined">
+                    <Card  variant="outlined" style={{textAlign:"justify"}}>
                     <CardContent style={{marginTop:"15px"}}>
-                      <Typography variant="h6" component="h2">
+                      <Typography variant="h6" component="h2" style={{fontSize:"50px"}}>
                         {`${this.props.single.title}`}
                       </Typography>
-                      <Typography variant="h6" component="h2">
+                      <Typography variant="h6" component="h2" style={{fontSize:"25px"}}>
                         {`${this.props.single.description}`}
                       </Typography>
                       <Typography variant="h6" component="h2">
-                        {`${this.props.single.price}`}
+                        {`Rs. ${this.props.single.price}`}
                       </Typography>
                       <video width="320" height="240" poster>
                         <source src={this.props.single.video[0]} type="video/mp4" />
@@ -109,16 +109,16 @@ class CourseDetaill extends Component {
                         </div>
                     </CardContent>
                     <div className={style.reviewDiv}>
-                      <h1 style={{color:"black" , marginTop:"50px"}}>Product Review</h1>
+                      <h1 style={{color:"black" ,textAlign:"justify", marginTop:"50px"}}>Ask Question</h1>
                       {this.props.user!==null && this.props.user.commenUser.role==='User'?
                       <div className="input-fields" >
                       <input type="text" name="review" onChange={this.handelChange} value={this.state.review} className="input" placeholder="Add Review"/>
-                      <button className={"no-focusborder"} onClick={this.handelReview}>Add Review</button>
+                      <button className={"no-focusborder"} onClick={this.handelReview}>Ask</button>
                       </div> :null}
-                      {this.props.user == null ? <Link to="/login"><button className={"no-focusborder"} type='submit' >Add Review</button></Link> :null}
+                      {this.props.user == null ? <Link to="/login"><button className={"no-focusborder"} type='submit' >Ask Question</button></Link> :null}
                       {this.props.review !== null? this.props.review.map(review =>
                         <div key={review._id}>
-                          <Review key={review._id}  review={review}/> 
+                          <Review key={review._id}  review={review} commentId={review._id}/> 
                         </div>
                         )  : null}
                     </div>

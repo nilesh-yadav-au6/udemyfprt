@@ -24,7 +24,7 @@ render(){
               {`Title : ${this.props.single.title}`}
             </Typography>
             <Typography variant="h6" component="h2">
-              {`Description : ${this.props.single.description}`}
+              {`Number of Buys : ${this.props.single.description}`}
             </Typography>
 
             {

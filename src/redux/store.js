@@ -4,13 +4,15 @@ import userReducer from "../redux/reducers/userReducer";
 import eventReducer from "../redux/reducers/eventReducer";
 import courseReducer from "../redux/reducers/courseReducer"
 import reviewReducer from "../redux/reducers/reviewReducer"
+import replyReducer from "../redux/reducers/reviewReplyReducer"
 import thunk from "redux-thunk";
 
 const reducer = combineReducers({
   user: userReducer,
   events: eventReducer,
   courses:courseReducer,
-  reviews:reviewReducer
+  reviews:reviewReducer,
+  reviewReplyState:replyReducer
 });
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
